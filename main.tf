@@ -79,7 +79,7 @@ module "workspaces_5min" {
   source              = "./modules/workspace"
   organization        = var.organization
   tfe_oauth_token_id  = local.tfe_token_id
-  # agent_pool_id       = tfe_agent_pool.test-agent-pool[0].id
+  agent_pool_id       = tfe_agent_pool.test-agent-pool[0].id
   duration            = "300s"
   memory              = "400M"
   workspace_name      = "omnihog_5min_${count.index}"
